@@ -1,0 +1,34 @@
+body {
+  font: 17px/1.5 system-ui;
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 24px;
+  color: #17243b;
+}
+label {
+  display: block;
+  margin: 16px 0;
+}
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  background: #1759bf;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+}
+output {
+  display: block;
+  background: #eef4ff;
+  padding: 20px;
+  margin-top: 20px;
+}
+a {
+  color: #1759bf;
+}

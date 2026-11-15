@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Customer ROI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="calculator.js" defer></script>
+  </head>
+  <body>
+    <h1>Could this solution pay for itself?</h1>
+    <p>
+      Explore an estimate using your own assumptions. All amounts must use the
+      same currency.
+    </p>
+    <form id="calculator">
+      <label
+        >Hours saved per month<input
+          name="hours"
+          type="number"
+          min="0"
+          step="any"
+          value="20"
+          required /></label
+      ><label
+        >Loaded hourly cost<input
+          name="rate"
+          type="number"
+          min="0"
+          step="any"
+          value="30"
+          required /></label
+      ><label
+        >Additional gross profit per month<input
+          name="profit"
+          type="number"
+          min="0"
+          step="any"
+          value="400"
+          required /></label
+      ><label
+        >Monthly solution cost<input
+          name="monthly"
+          type="number"
+          min="0"
+          step="any"
+          value="200"
+          required /></label
+      ><label
+        >Implementation cost<input
+          name="setup"
+          type="number"
+          min="0"
+          step="any"
+          value="2400"
+          required /></label
+      ><label
+        >Evaluation months<input
+          name="months"
+          type="number"
+          min="1"
+          max="120"
+          step="1"
+          value="12"
+          required /></label
+      ><button>Calculate estimate</button>
+    </form>
+    <output id="result" aria-live="polite"></output>
+    <p>
+      Estimates are not guaranteed outcomes. Built by
+      <a href="https://ataraxydevelopers.com">Ataraxy Developers</a>.
+    </p>
+  </body>
+</html>

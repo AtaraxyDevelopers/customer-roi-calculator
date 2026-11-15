@@ -1,0 +1,27 @@
+{
+  "name": "@ataraxydevelopers/customer-roi-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Explain the potential savings and payback of a proposed solution.",
+  "license": "MIT",
+  "author": "Ataraxy Developers",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtaraxyDevelopers/customer-roi-calculator.git"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "example": "node scripts/analyze.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "playwright test",
+    "browser:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@axe-core/playwright": "4.14.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "project": "customer-roi-calculator",
+  "settings": {
+    "currency": "USD",
+    "months": 12
+  },
+  "records": [
+    {
+      "id": "scenario-1",
+      "name": "Maple Studio",
+      "hoursSaved": 20,
+      "hourlyCost": 30,
+      "extraProfit": 400,
+      "monthlyCost": 200,
+      "setupCost": 2400
+    },
+    {
+      "id": "scenario-2",
+      "name": "River Foods",
+      "hoursSaved": 2,
+      "hourlyCost": 25,
+      "extraProfit": 0,
+      "monthlyCost": 100,
+      "setupCost": 500
+    }
+  ]
+}
