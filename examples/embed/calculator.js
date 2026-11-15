@@ -1,3 +1,12 @@
+const round = (n) => {
+  if (!Number.isFinite(n)) throw new Error("Expected a finite number");
+  const [coefficient, exponent = "0"] = String(Math.abs(n)).split("e");
+  const shifted = Math.round(Number(`${coefficient}e${Number(exponent) + 2}`));
+  const [rounded, power = "0"] = String(shifted).split("e");
+  return Number(`${rounded}e${Number(power) - 2}`) * Math.sign(n);
+};
+
+const format = (value) => round(value).toFixed(2);
 const form = document.getElementById("calculator");
 function calculate() {
   const data = Object.fromEntries(
@@ -10,15 +19,13 @@ function calculate() {
     total = net * data.months - data.setup;
   document.getElementById("result").textContent =
     "Monthly net benefit: " +
-    net.toFixed(2) +
+    format(net) +
     " | Period net benefit: " +
-    total.toFixed(2) +
+    format(total) +
     " | ROI: " +
-    (cost ? ((total / cost) * 100).toFixed(2) + "%" : "N/A (zero cost)") +
+    (cost ? format((total / cost) * 100) + "%" : "N/A (zero cost)") +
     " | Payback: " +
-    (net > 0
-      ? (data.setup / net).toFixed(2) + " months"
-      : "No positive payback");
+    (net > 0 ? format(data.setup / net) + " months" : "No positive payback");
 }
 form.addEventListener("submit", (event) => {
   event.preventDefault();
